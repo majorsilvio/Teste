@@ -26,7 +26,6 @@ class Lista extends Migration
             $table->binary('binary');
             $table->ipAddress('ipAddress');
             $table->macAddress('macAddress');
-            $table->point('point');
             $table->integer('integer');
             $table->smallInteger('smallInteger');
             $table->mediumInteger('mediumInteger');

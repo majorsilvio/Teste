@@ -16,9 +16,9 @@ class ListaController extends Controller
 
         $lista = 
         [
-            'text' => ['bfbda1ed-8a7a-4d6d-99f0-2b732391eedd'=>'uuid','string'=>'string','1p'=>'enum','macAddress'=>'macAddress','char'=>'char','lineString'=>'lineString','text'=>'text','mediumText'=>'mediumText','0.3'=>'decimal','127.0.0.0'=>'ipAddress','4.0R'=>'double','0,0'=>'float',date('Y/m/d') => 'date', date('Y/m/d G:i') =>'dateTime',true=>'boolean'],
+            'text' => ['bfbda1ed-8a7a-4d6d-99f0-2b732391eedd'=>'uuid','string'=>'string','1p'=>'enum','00-19-B9-FB-E2-57'=>'macAddress','char'=>'char','lineString'=>'lineString','text'=>'text','mediumText'=>'mediumText','0.3'=>'decimal','127.0.0.0'=>'ipAddress','4.0'=>'double','0.01'=>'float',date('Y/m/d') => 'date', date('Y/m/d G:i') =>'dateTime',true=>'boolean'],
 
-            'number' => ['0011'=>'binary','1'=>'point',2=>'integer',3 => 'smallInteger',4 => 'mediumInteger',5=>'bigInteger','2019'=>'year',time()=>'time']
+            'number' => ['0011'=>'binary',2=>'integer',3 => 'smallInteger',4 => 'mediumInteger',5=>'bigInteger','2019'=>'year',time()=>'time']
             
         ];
        
@@ -57,7 +57,6 @@ class ListaController extends Controller
         $lista->binary = $request->binary;
         $lista->ipAddress = $request->ipAddress;
         $lista->macAddress = $request->macAddress;
-        $lista->point = $request->point;
         $lista->integer = $request->integer;
         $lista->smallInteger = $request->smallInteger;
         $lista->bigInteger = $request->bigInteger;
