@@ -16,9 +16,26 @@ class ListaController extends Controller
 
         $lista = 
         [
-            'text' => ['bfbda1ed-8a7a-4d6d-99f0-2b732391eedd'=>'uuid','string'=>'string','1p'=>'enum','00-19-B9-FB-E2-57'=>'macAddress','char'=>'char','lineString'=>'lineString','text'=>'text','mediumText'=>'mediumText','0.3'=>'decimal','127.0.0.0'=>'ipAddress','4.0'=>'double','0.01'=>'float',date('Y/m/d') => 'date', date('Y/m/d G:i') =>'dateTime',true=>'boolean'],
+            'text' => [
+            'bfbda1ed-8a7a-4d6d-99f0-2b732391eedd'=>'uuid',
+            'string'=>'string',
+            '1p'=>'enum','00-19-B9-FB-E2-57'=>
+            'macAddress','char'=>'char',
+            'lineString'=>'lineString',
+            'text'=>'text',
+            'mediumText'=>'mediumText',
+            'longText' => 'longText',
+            '0.3'=>'decimal',
+            '127.0.0.0'=>'ipAddress',
+            '4.0'=>'double',
+            '0.01'=>'float',
+            date('Y/m/d') => 'date',
+             date('Y/m/d G:i') =>'dateTime',
+             true=>'boolean',
+             '19:30:10'=>'time'
+             ],
 
-            'number' => ['0011'=>'binary',2=>'integer',3 => 'smallInteger',4 => 'mediumInteger',5=>'bigInteger','2019'=>'year',time()=>'time']
+            'number' => ['0011'=>'binary',2=>'integer',3 => 'smallInteger',4 => 'mediumInteger',5=>'bigInteger','2019'=>'year']
             
         ];
        
@@ -64,7 +81,6 @@ class ListaController extends Controller
         $lista->char = $request->char;
         $lista->double = $request->double;
         $lista->float = $request->float;
-        $lista->lineString = $request->lineString;
         $lista->text = $request->text;
         $lista->mediumText = $request->mediumText;
         $lista->longText = $request->longText;

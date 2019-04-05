@@ -15,12 +15,11 @@ class Lista extends Migration
     {
         Schema::create('lista', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->uuid('uuid');
+            $table->uuid('uuid')->comment('digital code');
             $table->string('string');
-            $table->boolean('boolean');
+            $table->boolean('boolean')->default(false);
             $table->date('date');
             $table->dateTime('dateTime');
-            $table->dateTimeTz('dateTimeTz')->default(null);
             $table->enum('enum', ['1p', '2p', '3p']);
             $table->decimal('decimal', 8, 2);
             $table->binary('binary');
@@ -29,14 +28,13 @@ class Lista extends Migration
             $table->integer('integer');
             $table->smallInteger('smallInteger');
             $table->mediumInteger('mediumInteger');
-            $table->bigInteger('bigInteger');
+            $table->bigInteger('bigInteger')->unsigned();
             $table->char('char', 100);
             $table->double('double', 8, 2);
             $table->float('float', 8, 2);
-            $table->lineString('lineString');
-            $table->text('text');
-            $table->mediumText('mediumText');
-            $table->longText('longText');
+            $table->text('text')->always();
+            $table->mediumText('mediumText')->collation('utf8_unicode_ci');
+            $table->longText('longText')->charset('utf8');
             $table->year('year');
             $table->softDeletes('softDeletes');
             $table->softDeletesTz();
