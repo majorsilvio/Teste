@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::get('/','ListaController@index');
+Route::post('adicionarItem','ListaController@store')->name('adicionar');
 
 Auth::routes();
 
